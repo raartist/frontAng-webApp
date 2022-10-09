@@ -1,0 +1,11 @@
+
+    <mat-accordion multi="true" *ngIf="postList.length">
+        <mat-expansion-panel *ngFor="let post of postList">
+            <mat-expansion-panel-header>
+                {{post.title}}
+            </mat-expansion-panel-header>
+            <p>{{post.content}}</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+    
+<p *ngIf="postList.length<=0" class="mat-body-1 fallback">No post available!</p>
